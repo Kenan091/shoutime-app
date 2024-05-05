@@ -18,51 +18,60 @@ Shoutime is an application that allows users to explore top movies and TV shows,
 
 To get started, simply clone this repository and run the following command:
 
-````bash
+```bash
 npm install
-````
+```
 
 This will install all the necessary dependencies.
 
-Running the Application
+**Important Note:** Before running the application, you need to create a file named `.env` in the root directory of your project (not inside the `src` folder). Inside this file, add the following lines, replacing `YOUR_API_KEY` with your actual TMDB API key and `YOUR_ACCESS_TOKEN` with your actual TMDB Access token:
 
-Development Mode
+```bash
+VITE_TMDB_API_KEY=YOUR_API_KEY
+VITE_TMDB_ACCESS_TOKEN=YOUR_ACCESS_TOKEN
+```
+
+**Remember:** Don't commit the `.env` file to version control (e.g., Git). Add a line like `.env` to your `.gitignore` file to prevent this.
+
+## Running the Application
+
+### Development Mode
 
 To start the development server, run:
 
-````bash
+```bash
 npm run dev
-````
+```
 
 This command will start the development server using Vite.
 
-Building for Production
+## Building for Production
 
 To build the application for production, run:
 
-````bash
+```bash
 npm run build
-````
+```
 
 This command will compile TypeScript files and then build the app using Vite.
 
-Linting
+## Linting
 
 To lint the codebase, run:
 
-````bash
+```bash
 npm run lint
-````
+```
 
 This command will run ESLint to analyze the code for any potential issues.
 
-Preview
+## Preview
 
 To preview the production build locally, run:
 
-````bash
+```bash
 npm run preview
-````
+```
 
 This command will serve the production build locally for previewing before deployment.
 
@@ -101,7 +110,7 @@ export default {
     tsconfigRootDir: __dirname,
   },
 };
-````
+```
 
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`

@@ -57,7 +57,6 @@ const VideoIframe: React.FC<IProps> = ({ videoId, autoPlay, title }) => {
       width='100%'
       height={`${videoHeight}px`}
       src={videoURL}
-      allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
       allowFullScreen
       className='detailsVideoPlayer'
     />

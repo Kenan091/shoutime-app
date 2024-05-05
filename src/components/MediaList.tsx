@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import SearchBar from './SearchBar';
 import Spinner from './Spinner';
 
+const ACCESS_TOKEN = import.meta.env.VITE_TMDB_ACCESS_TOKEN;
+
 interface MediaDetails {
   title: string;
   overview: string;
@@ -37,11 +39,14 @@ const MediaList: FC<MediaListProps> = ({ type }) => {
       const options = {
         method: 'GET',
         url: `https://api.themoviedb.org/3/${type}/top_rated`,
-        params: { language: 'en-US', page: '1', page_size: 10 },
+        params: {
+          language: 'en-US',
+          page: '1',
+          page_size: 10,
+        },
         headers: {
           accept: 'application/json',
-          Authorization:
-            'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNGZjYWQxMGIxMWExMDVmNzQ4NTE2NjdlYTE3MzlhMSIsInN1YiI6IjY2MzM1NmRmNjY1NjVhMDEyMzEzY2UxMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Y-9tg77ZeMUFcz1S7ZbllUIzJ8O1k8UZW7dAD_8zfhg',
+          Authorization: `Bearer ${ACCESS_TOKEN}`,
         },
       };
 
@@ -70,8 +75,7 @@ const MediaList: FC<MediaListProps> = ({ type }) => {
             {
               headers: {
                 accept: 'application/json',
-                Authorization:
-                  'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNGZjYWQxMGIxMWExMDVmNzQ4NTE2NjdlYTE3MzlhMSIsInN1YiI6IjY2MzM1NmRmNjY1NjVhMDEyMzEzY2UxMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Y-9tg77ZeMUFcz1S7ZbllUIzJ8O1k8UZW7dAD_8zfhg',
+                Authorization: `Bearer ${ACCESS_TOKEN}`,
               },
             }
           );
