@@ -1,0 +1,270 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h3 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  min-height: 100vh;
+  max-width: 644px;
+  margin: 0 auto;
+}
+
+/* Navbar Styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.navButtons {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.navButton {
+  list-style: none;
+  text-align: center;
+  width: 50%;
+  border-left: 2px solid #000;
+  cursor: pointer;
+}
+
+.navButton:last-child {
+  border-right: 2px solid #000;
+}
+.navButton.active {
+  background-color: #95bcf2;
+}
+
+.logo {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bolder;
+  font-size: 24px;
+  background-color: #000;
+  color: #95bcf2;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  cursor: default;
+  user-select: none;
+}
+
+.whitePart {
+  color: #fff;
+}
+
+/* SearchBar Styling */
+.searchBar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 30px;
+  margin-top: 2rem;
+  border: 2px solid #000;
+  border-right-width: 1px;
+  border-radius: 50px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.searchIcon {
+  padding-top: 0.4rem;
+  padding-left: 1rem;
+  cursor: pointer;
+}
+
+.searchInput {
+  width: 100%;
+  height: 30px;
+  border: 2px solid #000;
+  border-width: 2px 0;
+  outline: none;
+}
+
+/* Media List Styling */
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5rem;
+  margin: 2rem 0;
+}
+
+.card {
+  width: 280px;
+  height: 400px;
+  text-align: center;
+  border: 2px solid #000;
+  border-radius: 5px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.cardImgContainer {
+  height: 90%;
+}
+
+.cardImg {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  margin: 0;
+}
+
+.cardTitleContainer {
+  height: 10%;
+  background-color: #95bcf2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.cardTitle {
+  font-size: 12px;
+  color: #000;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Details Styling */
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100px;
+  margin: 2rem 0;
+  cursor: pointer;
+}
+
+.backButtonText {
+  font-size: 20px;
+  height: 32.8px;
+}
+
+.detailsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+  margin-bottom: 2rem;
+}
+
+.detailsVideoPlayer {
+  border: 0;
+  border-radius: 5px;
+}
+
+.detailsImg {
+  width: 400px;
+  height: 500px;
+  margin: 0 auto;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+.detailsTitle {
+  font-size: 28px;
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.detailsOverview {
+  margin-top: 2rem;
+}
+
+/* Spinner Styling */
+.loadingSpinnerContainer {
+  background-color: transparent;
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingSpinner {
+  border: 8px solid;
+  border-color: #000 transparent #95bcf2 transparent;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    max-width: 600px;
+  }
+
+  /* Media List Styling */
+  .cardsContainer {
+    justify-content: center;
+    gap: 2.4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 540px) {
+  .container {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 440px) {
+  .container {
+    max-width: 300px;
+  }
+
+  /* Navbar styles */
+  header {
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
