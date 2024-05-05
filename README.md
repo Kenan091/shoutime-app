@@ -20,6 +20,7 @@ To get started, simply clone this repository and run the following command:
 
 ````bash
 npm install
+````
 
 This will install all the necessary dependencies.
 
@@ -29,7 +30,9 @@ Development Mode
 
 To start the development server, run:
 
+````bash
 npm run dev
+````
 
 This command will start the development server using Vite.
 
@@ -37,7 +40,9 @@ Building for Production
 
 To build the application for production, run:
 
+````bash
 npm run build
+````
 
 This command will compile TypeScript files and then build the app using Vite.
 
@@ -45,7 +50,9 @@ Linting
 
 To lint the codebase, run:
 
+````bash
 npm run lint
+````
 
 This command will run ESLint to analyze the code for any potential issues.
 
@@ -53,7 +60,9 @@ Preview
 
 To preview the production build locally, run:
 
+````bash
 npm run preview
+````
 
 This command will serve the production build locally for previewing before deployment.
 
